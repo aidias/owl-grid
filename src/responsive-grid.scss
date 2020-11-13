@@ -42,20 +42,20 @@ body {
 	@return $width#{"%"};
 }
 
-	@for $i from 1 through $grid-columns {
-		.xl-#{$i} {
-			flex-basis: round-width($i);
-			max-width: round-width($i);
-		}
-		.offset-xl-#{$i} {
-			flex-basis: round-width($i);
-			max-width: round-width($i);
-		}
+@for $i from 1 through $grid-columns {
+	.xl-#{$i} {
+		flex-basis: round-width($i);
+		max-width: round-width($i);
 	}
+	.offset-xl-#{$i} {
+		flex-basis: round-width($i);
+		max-width: round-width($i);
+	}
+}
 
-	.container {
-		max-width: 1904px;
-	}
+.container {
+	max-width: 1904px;
+}
 
 @media (max-width: 1904px) {
 	@for $i from 1 through $grid-columns {
@@ -202,4 +202,4 @@ body {
 
 div[class^='offset'], div[class*='offset']{
 	opacity: 0;
-  }
+}
