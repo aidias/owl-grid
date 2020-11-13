@@ -1,4 +1,4 @@
-[<p align="center"><img src="./demo/assets/OwlUI_wlogo.png" width="600"/></p>](./OwlUI_wlogo.png)
+[<p align="center"><img src="./demo/assets/OwlUI_wlogo.png" width="500"/></p>](./OwlUI_wlogo.png)
 
 
 1. [A Grid](#A-Grid)
