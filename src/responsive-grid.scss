@@ -149,7 +149,6 @@ body {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	// max-width: calc(100% + #{$grid-gutter});
 }
 
 .col {
@@ -157,7 +156,6 @@ body {
     flex-flow: column;
 	min-height: 1px;
 	box-sizing: border-box;
-	// padding: calc(var(--grid-gap)) 0 0 calc(var(--grid-gap));
 	background-clip: content-box;
 	flex-basis: 100%;
 }
