@@ -1,8 +1,5 @@
-<header align="center" >
+[<p align="center"><img src="./demo/assets/OwlUI_wlogo.png" width="600"/></p>](./OwlUI_wlogo.png)
 
-[<img src="./assets/OwlUI_wlogo.png" width="200"/>](./OwlUI_wlogo.png)
-
-</header>
 
 1. [A Grid](#A-Grid)
 
@@ -19,5 +16,4 @@ A grid possibilita a criação rápida e tranquila de aplicações responsivas j
 #### Por que resposivo?
 
 Nós queremos que nossos componentes alcancem todos os publicos, e que consiga ser comportada pelo máximo de dispositivos possiveis não importando a orientação da tela ou o seu tamanho. 
-
 
