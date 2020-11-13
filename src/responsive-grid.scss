@@ -18,15 +18,6 @@ $grid-gutters: (
 	'xl': $grid-gutter
 );
 
-@each $name,
-$glyph in $grid-breakpoints {
-	.icon-#{$name}:before {
-		display: inline-block;
-		font-family: "Icon Font";
-		content: $glyph;
-	}
-}
-
 *,
 ::after,
 ::before {
