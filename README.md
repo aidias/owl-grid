@@ -1,8 +1,6 @@
-<header align="center" >
 
-[<img src="./assets/OwlUI_wlogo.png" width="200"/>](./OwlUI_wlogo.png)
+[<p align="center"><img src="./assets/OwlUI_wlogo.png" width="600"/></p>](./OwlUI_wlogo.png)
 
-</header>
 
 1. [A Grid](#A-Grid)
 
