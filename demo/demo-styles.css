@@ -1,0 +1,20 @@
+*{
+	transition: ease-in-out 150ms;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: white; 
+  min-height: 150px;
+}
+
+.col:nth-of-type(2n) {
+  background-color: #473c38
+}
+
+.col:nth-of-type(2n+1) {
+  background-color: #eec76a;
+}

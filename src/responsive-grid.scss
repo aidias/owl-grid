@@ -1,0 +1,196 @@
+$spacer: 4px !default;
+
+$proportion: 6;
+
+$grid-gutter: $spacer * $proportion !default;
+$grid-columns: 12;
+$grid-breakpoints: (
+	'xs': 0,
+	'sm': 600px,
+	'md': 960px,
+	'lg': 1280px - 16px,
+	'xl': 1920px - 16px
+);
+
+$grid-gutters: (
+	'xs': $grid-gutter / 12,
+	'sm': $grid-gutter / 6,
+	'md': $grid-gutter / 3,
+	'lg': $grid-gutter * 2/3,
+	'xl': $grid-gutter
+);
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+@function round-width ($i) {
+	$width: (100 * $i * 100/ $grid-columns) / 100;
+	@return $width#{"%"};
+}
+
+@for $i from 1 through $grid-columns {
+	.xl-#{$i} {
+		flex-basis: round-width($i);
+		max-width: round-width($i);
+	}
+	.offset-xl-#{$i} {
+		flex-basis: round-width($i);
+		max-width: round-width($i);
+	}
+}
+
+.container {
+	max-width: 1904px;
+}
+
+@media (max-width: 1904px) {
+	@for $i from 1 through $grid-columns {
+		.lg-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+		.offset-lg-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+	}
+}
+
+@media (max-width: 1264px) {
+	@for $i from 1 through $grid-columns {
+		.md-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+		.offset-md-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+	}
+}
+
+@media (max-width: 960px) {
+	@for $i from 1 through $grid-columns {
+		.sm-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+		.offset-sm-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	@for $i from 1 through $grid-columns {
+		.xs-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+		.offset-xs-#{$i} {
+			flex-basis: round-width($i);
+			max-width: round-width($i);
+		}
+	}
+}
+
+@media (min-width: 1264px) and (max-width: 1904px) {
+	.container {
+		max-width: 1904px - $grid-gutter;
+	}
+}
+
+@media (min-width: 960px) and (max-width: 1264px) {
+	.container {
+		max-width: 1264px - $grid-gutter;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 960px) {
+	.container {
+		max-width: 960px - $grid-gutter;
+	}
+}
+
+@media (max-width: 600px) {
+	.container {
+		max-width: 600px - $grid-gutter;
+	}
+}
+
+.container {
+	padding: $spacer * $proportion/2;
+	margin-right: auto;
+	margin-left: auto;
+	flex-grow: 1;
+    display: flex;
+	flex-shrink: 1;
+	
+	&.grow-shrink-0 {
+		flex-grow: 0;
+		flex-shrink: 0;
+	}
+
+	&.fill-height {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		min-height: 100vh;
+	}
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col {
+	padding: 4px;
+    flex-flow: column;
+	min-height: 1px;
+	box-sizing: border-box;
+	background-clip: content-box;
+	flex-basis: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	.md-hidden {
+		display: none !important
+	}
+}
+
+.align-center {
+	align-self: center;
+	align-items: center;
+}
+
+.spacer {
+	flex-grow: 1 !important;
+}
+
+.grow {
+	flex-grow: 1 !important;
+	flex-shrink: 0 !important;
+}
+
+.shrink {
+	flex-grow: 0 !important;
+	flex-shrink: 1 !important;
+}
+
+.fill-height {
+	height: 100%
+}
+
+div[class^='offset'], div[class*='offset']{
+	opacity: 0;
+}
