@@ -1,6 +1,8 @@
 $spacer: 4px !default;
 
-$grid-gutter: $spacer * 6 !default;
+$proportion: 6;
+
+$grid-gutter: $spacer * $proportion !default;
 $grid-columns: 12;
 $grid-breakpoints: (
 	'xs': 0,
@@ -125,7 +127,7 @@ body {
 }
 
 .container {
-	padding: $spacer * 3;
+	padding: $spacer * $proportion/2;
 	margin-right: auto;
 	margin-left: auto;
 	flex-grow: 1;
