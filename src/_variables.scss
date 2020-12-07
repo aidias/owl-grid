@@ -1,0 +1,21 @@
+$spacer: 4px !default;
+
+$proportion: 6;
+
+$grid-gutter: $spacer * $proportion !default;
+$grid-columns: 12;
+$grid-breakpoints: (
+	'xs': 0,
+	'sm': 600px,
+	'md': 960px,
+	'lg': 1280px - 16px,
+	'xl': 1920px - 16px
+);
+
+$grid-gutters: (
+	'xs': $grid-gutter / 12,
+	'sm': $grid-gutter / 6,
+	'md': $grid-gutter / 3,
+	'lg': $grid-gutter * 2/3,
+	'xl': $grid-gutter
+);
